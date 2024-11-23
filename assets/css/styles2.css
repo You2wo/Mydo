@@ -3,6 +3,11 @@ body {
     overflow-x: hidden;
 }
 
+
+a{
+    text-decoration: none;
+}
+
 /* Nav */
 .navbar-container {
     position: fixed;
@@ -387,10 +392,19 @@ body {
 }
 
 .card-text {
+    width: 250px;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     color: #666;
     font-size: 0.85rem;
     line-height: 1.4;
     margin-bottom: 12px;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 5px;
 }
 
 .progress {
