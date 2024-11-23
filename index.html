@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mydo</title>
+
+    <!-- Libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="icon" href="assets/img/logo s.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <video class="loader-video" autoplay loop muted playsinline>
+        <source src="assets/img/Logo.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div data-bss-parallax-bg="true" style="height: 385px;background: url(assets/img/hero.png);">
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/Logo.png" alt="Mydo">
+                    </a>
+                        
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-i18n="nav.home">Beranda</a>
+                            </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="explore.html" data-i18n="nav.explore">Eksplor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"data-i18n="nav.about">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tracking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"data-i18n="nav.fundraise">Penggalangan Dana</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"data-i18n="nav.news">Berita</a>
+                            </li>
+                        </ul>
+                            
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-login"data-i18n="nav.login">Masuk</button>
+                            <button class="btn btn-register"data-i18n="nav.register">Daftar</button>
+                            <div class="dropdown">
+                              <button class="btn-language dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src="assets/img/indonesiabtn.png" alt="Language">
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                  <li>
+                                      <a class="dropdown-item" href="#" data-lang="id">
+                                          <img src="assets/img/indonesia.png" alt="Indonesia"> Indonesia
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a class="dropdown-item" href="#" data-lang="en">
+                                          <img src="assets/img/us.png" alt="English"> English
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-6 col-xxl-4 offset-xl-0 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="search-categories-section">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="search-wrapper position-relative">
+                  <div id="placeholder" class="position-absolute top-50 translate-middle-y ps-5" style="color: #7BD8EC; pointer-events: none;">
+                    Donasi <span id="changing-text">Kampung Melayu</span>
+                </div>
+                <input
+                    id="search-input"
+                    type="text"
+                    class="form-control form-control-lg rounded-pill shadow-sm ps-5"
+                    style="color: #07C3EC; font-size: 18px;"
+                />
+                <i class="bi bi-search position-absolute top-50 translate-middle-y ms-4"></i>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center text-center g-4">
+            <div class="col-4 col-md-2">
+                <div class="category-item">
+                    <div class="icon-wrapper mendesak-bg bg-opacity-10 mx-auto mb-2 rounded p-3 d-inline-block">
+                        <i class="bi bi-exclamation-triangle-fill text-danger fs-4"></i>
+                    </div>
+                    <p class="mb-0 text-secondary" data-i18n="category.urgent">Mendesak</p>
+                </div>
+            </div>
+    
+            <div class="col-4 col-md-2">
+                <div class="category-item">
+                    <div class="icon-wrapper mendekati-bg bg-opacity-10 mx-auto mb-2 rounded p-3 d-inline-block">
+                        <i class="bi bi-opencollective text-success fs-4"></i>
+                    </div>
+                    <p class="mb-0 text-secondary" data-i18n="category.approaching">Mendekati</p>
+                </div>
+            </div>
+    
+            <div class="col-4 col-md-2">
+                <div class="category-item">
+                    <div class="icon-wrapper proses-bg bg-opacity-10 mx-auto mb-2 rounded p-3 d-inline-block">
+                        <i class="bi bi-heart-half text-info fs-4"></i>
+                    </div>
+                    <p class="mb-0 text-secondary" data-i18n="category.process">Proses</p>
+                </div>
+            </div>
+    
+            <div class="col-4 col-md-2">
+                <div class="category-item">
+                    <div class="icon-wrapper inisiatif-bg bg-opacity-10 mx-auto mb-2 rounded p-3 d-inline-block">
+                        <i class="bi bi-heart-fill text-primary fs-4"></i>
+                    </div>
+                    <p class="mb-0 text-secondary" data-i18n="category.initiative">Inisiatif</p>
+                </div>
+            </div>
+    
+            <div class="col-4 col-md-2">
+                <div class="category-item">
+                    <div class="icon-wrapper natural-bg bg-opacity-10 mx-auto mb-2 rounded p-3 d-inline-block">
+                        <i class="bi bi-lightning-fill text-warning fs-4"></i>
+                    </div>
+                    <p class="mb-0 text-secondary">Natural</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container px-4">
+            <section class="donation-section mx-3">
+                <h2 class="mb-4" data-i18n="sections.donation">Kegiatan Donasi</h2>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img src="assets/img/donasi1.png" class="card-img-top" alt="Kampung Melayu">
+                        <div class="card-badge danger mendesak-bg">
+                          <i class="bi bi-exclamation-triangle-fill"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Kampung Melayu</h5>
+                          <p class="text-muted small">Lorem ipsum</p>
+                          <p class="card-text small">Lorem ipsum dolor amet, consectetuer adipiscing elit. Etiam feugiat phasellus hac dictum efficitur urna massa congue.</p>
+                          <div class="d-flex justify-content-between">
+                            <span class="amount">Rp <span class="mendesak-price">700.000,00</span></span>
+                            <span class="text-muted">/5.000.000,00</span>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar mendesak-progress" style="width: 43%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img src="assets/img/hero.png" class="card-img-top" alt="Kampung Melayu">
+                        <div class="card-badge danger mendekati-bg">
+                          <i class="bi bi-opencollective"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Kampung Melayu</h5>
+                          <p class="text-muted small">Lorem ipsum</p>
+                          <p class="card-text small">Lorem ipsum dolor amet, consectetuer adipiscing elit. Etiam feugiat phasellus hac dictum efficitur urna massa congue.</p>
+                          <div class="d-flex justify-content-between">
+                            <span class="amount">Rp <span class="mendekati-price">700.000,00</span></span>
+                            <span class="text-muted">/5.000.000,00</span>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar mendekati-progress" style="width: 40%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img src="assets/img/hero.png" class="card-img-top" alt="Kampung Melayu">
+                        <div class="card-badge danger mendekati-bg">
+                          <i class="bi bi-opencollective"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Kampung Melayu</h5>
+                          <p class="text-muted small">Lorem ipsum</p>
+                          <p class="card-text small">Lorem ipsum dolor amet, consectetuer adipiscing elit. Etiam feugiat phasellus hac dictum efficitur urna massa congue.</p>
+                          <div class="d-flex justify-content-between">
+                            <span class="amount">Rp <span class="mendekati-price">700.000,00</span></span>
+                            <span class="text-muted">/5.000.000,00</span>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar mendekati-progress" style="width: 40%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img src="assets/img/hero.png" class="card-img-top" alt="Kampung Melayu">
+                        <div class="card-badge danger proses-bg">
+                          <i class="bi bi-heart-half"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Kampung Melayu</h5>
+                          <p class="text-muted small">Lorem ipsum</p>
+                          <p class="card-text small">Lorem ipsum dolor amet, consectetuer adipiscing elit. Etiam feugiat phasellus hac dictum efficitur urna massa congue.</p>
+                          <div class="d-flex justify-content-between">
+                            <span class="amount">Rp <span class="proses-price">700.000,00</span></span>
+                            <span class="text-muted">/5.000.000,00</span>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar proses-progress" style="width: 40%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img src="assets/img/hero.png" class="card-img-top" alt="Kampung Melayu">
+                        <div class="card-badge danger proses-bg">
+                          <i class="bi bi-heart-half"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Kampung Melayu</h5>
+                          <p class="text-muted small">Lorem ipsum</p>
+                          <p class="card-text small">Lorem ipsum dolor amet, consectetuer adipiscing elit. Etiam feugiat phasellus hac dictum efficitur urna massa congue.</p>
+                          <div class="d-flex justify-content-between">
+                            <span class="amount">Rp <span class="proses-price">700.000,00</span></span>
+                            <span class="text-muted">/5.000.000,00</span>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar proses-progress" style="width: 40%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+
+        <div class="container px-4">
+          <section class="kampanye-section mx-3">
+            <h2 data-i18n="sections.campaign">Kampanye</h2>
+            <div class="swiper kampanyeSwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="card kampanye-card">
+                            <img src="assets/img/kampanye2.png" class="card-img-top" alt="Kali Cisadane">
+                            <div class="card-badge danger natural-bg">
+                                <i class="bi bi-lightning-fill"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Perbaiki Kali Cisadane, Bantu Sekolah Hindari Banjir</h5>
+                                <div class="amount natural-price">Rp 10.000.000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card kampanye-card">
+                            <img src="assets/img/kampanye1.png" class="card-img-top" alt="Tamasya Anak Yatim">
+                            <div class="card-badge danger inisiatif-bg">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tamasya Anak Yatim, Hadirkan Senyum Wajah Mereka</h5>
+                                <div class="amount inisiatif-price">Rp 2.000.000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card kampanye-card">
+                            <img src="assets/img/indonesia.png" class="card-img-top" alt="Kampanye">
+                            <div class="card-badge danger inisiatif-bg">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bantu Pembangunan Masjid</h5>
+                                <div class="amount inisiatif-price">Rp 5.000.000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card kampanye-card">
+                          <img src="assets/img/indonesia.png" class="card-img-top" alt="Kampanye">
+                          <div class="card-badge danger natural-bg">
+                              <i class="bi bi-lightning-fill"></i>
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">Bantu Pembangunan Masjid</h5>
+                              <div class="amount natural-price">Rp 5.000.000</div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="card kampanye-card">
+                        <img src="assets/img/indonesia.png" class="card-img-top" alt="Kampanye">
+                        <div class="card-badge danger inisiatif-bg">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bantu Pembangunan Masjid</h5>
+                            <div class="amount inisiatif-price">Rp 5.000.000</div>
+                        </div>
+                    </div>
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>
+
+        <section class="footer-corner">
+          <section class="footer-inner">
+            <div class="container px-4">
+              <section class="artikel-section mx-3">
+                  <h2 data-i18n="sections.article">Artikel</h2>
+          
+                  <div class="row g-4">
+
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                          <div class="card artikel-card">
+                              <img src="assets/img/hero.png" class="card-img-top" alt="Penjual Donat">
+                              <div class="card-body">
+                                  <h5 class="card-title">Perjuangan Fadli si Bocah Penjual Donat Sejak Usia 6 Tahun</h5>
+                                  <p class="card-text">Jiwa berdagang bocah penjual donat, Fadli, sudah terlihat dari dia berumur enam tahun, dibalik mimpi menjual donat tentang buatan ibunya, siswa kelas 2 sekolah dasar ini nyaris ikut berjualan...</p>
+                                  <div class="card-date">05/12/2017</div>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                          <div class="card artikel-card">
+                              <img src="assets/img/hero.png" class="card-img-top" alt="Petani">
+                              <div class="card-body">
+                                  <h5 class="card-title">Wanti-wanti soal Neraka Iklim Bikin Bahan Pangan Sulit Ujungnya Kelaparan</h5>
+                                  <p class="card-text">Presiden Joko Widodo: Usaha mengantisipasi dunia tentang situasi-situasi dengan kondisi perubahan iklim global yang membahayakan saat ini...</p>
+                                  <div class="card-date">17/06/2024</div>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                          <div class="card artikel-card">
+                              <img src="assets/img/hero.png" class="card-img-top" alt="SDGs">
+                              <div class="card-body">
+                                  <h5 class="card-title">Target SDGs "Tanpa Kelaparan" Sulit Tercapai</h5>
+                                  <p class="card-text">Target nomor dua Tujuan Pembangunan Berkelanjutan atau SDGs "Tanpa Kelaparan" pada 2030 tampaknya sulit tercapai, baik di tingkat global maupun nasional. Terlalu banyak...</p>
+                                  <div class="card-date">18/12/2023</div>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                          <div class="card artikel-card">
+                              <img src="assets/img/hero.png" class="card-img-top" alt="Artikel">
+                              <div class="card-body">
+                                  <h5 class="card-title">Artikel Berikutnya</h5>
+                                  <p class="card-text">Deskripsi artikel berikutnya...</p>
+                                  <div class="card-date">DD/MM/YYYY</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          </div>
+          </section>
+        </section>
+            
+          </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <img src="assets/img/logowhite.png" alt="Mydo" class="footer-logo">
+        <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">About Us</a>
+            <a href="#">Tracking</a>
+            <a href="#">News</a>
+            <a href="#">Fundraise</a>
+            <a href="#" class="footer-social">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </nav>
+    </div>
+    <div class="footer-container footer-bottom">
+        <div class="footer-subscribe">
+            <input type="email" placeholder="Enter Your Email here">
+            <button type="button">Subscribe</button>
+        </div>
+        <div class="footer-copyright">
+            Copyright © 2024 Nobodies
+        </div>
+    </div>
+  </footer>
+
+
+
+    <!-- Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.16/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.1.4/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/i18n.js"></script>
+</body>
+</html>
